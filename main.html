@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrocerQuick POS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="C:\Users\rodri\OneDrive\Escritorio\Tareas Uni\Tarea Progra1\FirstLandingPage\Backend\style.css">
+</head>
+<body>
+
+  <!-- ============ ENCABEZADO ============ -->
+  <header class="header">
+    <div class="contenedor header__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__icono">GQ</span>
+        GrocerQuick POS
+      </a>
+
+      <nav class="nav">
+        <a href="#nosotros" class="nav__link" data-scroll>Conócenos</a>
+        <a href="#contacto" class="nav__link" data-scroll>Contacto</a>
+        <button id="btnLogin" class="btn btn--outline">Login</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ VISTA PRINCIPAL (landing) ============ -->
+  <main id="vistaPrincipal">
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="contenedor hero__inner">
+        <div class="hero__texto">
+          <h1>Gestión eficiente<br>para tu supermercado</h1>
+          <p>
+            Simplifica tus operaciones diarias con GrocerQuick POS.
+            Un sistema pensado para la velocidad, la claridad y la
+            eficiencia en el punto de venta.
+          </p>
+          <button class="btn btn--primario" data-scroll data-target="#servicios">
+            Comenzar ahora
+          </button>
+        </div>
+
+        <div class="hero__arte" id="heroArte">
+          <div class="terminal">
+            <div class="terminal__pantalla">
+              <div class="terminal__fila">
+                <span class="chip chip--naranja"></span>
+                <span class="chip chip--teal"></span>
+              </div>
+              <div class="terminal__fila">
+                <span class="chip chip--teal"></span>
+                <span class="chip chip--naranja"></span>
+              </div>
+              <div class="terminal__barra"></div>
+              <div class="terminal__barra terminal__barra--corta"></div>
+            </div>
+            <div class="terminal__base"></div>
+          </div>
+          <div class="terminal__ticket"></div>
+          <div class="terminal__moneda terminal__moneda--1"></div>
+          <div class="terminal__moneda terminal__moneda--2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="servicios">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Nuestros servicios</h2>
+
+        <div class="tarjetas">
+
+          <article class="tarjeta" data-tilt>
+            <div class="tarjeta__icono tarjeta__icono--teal">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M8 14L24 6l16 8v20l-16 8-16-8V14Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 14l16 8 16-8M24 22v20" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Gestión de inventario</h3>
+            <p>Controla existencias en tiempo real y evita quiebres de stock.</p>
+          </article>
+
+          <article class="tarjeta" data-tilt>
+            <div class="tarjeta__icono tarjeta__icono--naranja">
+              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="6" stroke="currentColor" stroke-width="2"/><path d="M10 40c0-8 6-13 14-13s14 5 14 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Gestión de clientes</h3>
+            <p>Historial de compras y programas de fidelidad en un solo lugar.</p>
+          </article>
+
+          <article class="tarjeta" data-tilt>
+            <div class="tarjeta__icono tarjeta__icono--teal">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M14 40V22M24 40V10M34 40V28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 40h32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Gestión de empleados</h3>
+            <p>Turnos, permisos y desempeño de tu equipo bajo control.</p>
+          </article>
+
+          <article class="tarjeta" data-tilt>
+            <div class="tarjeta__icono tarjeta__icono--naranja">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M8 32l10-10 8 6 14-16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 12h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Gestión de ventas</h3>
+            <p>Reportes claros para tomar mejores decisiones cada día.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="nosotros">
+      <div class="contenedor nosotros__inner">
+        <div>
+          <h2 class="titulo-seccion titulo-seccion--izq">Conócenos</h2>
+          <p>
+            GrocerQuick POS nace de la necesidad de los supermercados
+            pequeños y medianos de tener un sistema de punto de venta
+            rápido, confiable y fácil de aprender. Diseñamos cada
+            pantalla pensando en el ritmo real de una caja: pocos
+            clics, información clara y cero fricción.
+          </p>
+        </div>
+        <div class="nosotros__stats">
+          <div class="stat">
+            <strong>+120</strong>
+            <span>Tiendas activas</span>
+          </div>
+          <div class="stat">
+            <strong>3.2s</strong>
+            <span>Tiempo prom. por venta</span>
+          </div>
+          <div class="stat">
+            <strong>99.8%</strong>
+            <span>Disponibilidad</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto">
+      <div class="contenedor contacto__inner">
+        <div>
+          <h2 class="titulo-seccion titulo-seccion--izq">Hablemos</h2>
+          <p>¿Tienes dudas sobre GrocerQuick POS? Escríbenos y te respondemos pronto.</p>
+        </div>
+
+        <form id="formContacto" class="form-contacto" novalidate>
+          <label>
+            Nombre
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+          </label>
+          <label>
+            Correo
+            <input type="email" name="correo" placeholder="tucorreo@ejemplo.com" required>
+          </label>
+          <label>
+            Mensaje
+            <textarea name="mensaje" rows="3" placeholder="Cuéntanos qué necesitas" required></textarea>
+          </label>
+          <button type="submit" class="btn btn--primario">Enviar mensaje</button>
+          <p id="mensajeEstado" class="form-contacto__estado" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ VISTA DE LOGIN (oculta al inicio) ============ -->
+  <section id="vistaLogin" class="vista-login oculto">
+    <div class="vista-login__panel">
+      <button id="btnVolver" class="btn-volver" type="button">← Volver al sitio</button>
+
+      <div class="vista-login__marca">
+        <span class="logo__icono">GQ</span>
+        <span>GrocerQuick POS</span>
+      </div>
+
+      <h1>Inicia sesión</h1>
+      <p class="vista-login__sub">Accede al panel de tu tienda.</p>
+
+      <form id="formLogin" class="form-login" novalidate>
+        <label>
+          Usuario
+          <input type="text" id="usuario" name="usuario" placeholder="usuario@tienda.com" required>
+        </label>
+        <label>
+          Contraseña
+          <input type="password" id="contrasena" name="contrasena" placeholder="••••••••" required>
+        </label>
+        <button type="submit" class="btn btn--primario btn--ancho">Entrar</button>
+        <p id="loginEstado" class="form-login__estado" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ PIE DE PÁGINA ============ -->
+  <footer class="footer">
+    <div class="contenedor footer__inner">
+      <span>GrocerQuick POS</span>
+      <span class="footer__copy">© 2026 · Proyecto académico</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
