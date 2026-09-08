@@ -1,21 +1,23 @@
 /* ===================== VARIABLES ===================== */
 :root {
-  --teal-900: #0E5E59;
-  --teal-700: #147A73;
-  --teal-100: #DCEDEA;
-  --naranja: #E8763C;
-  --naranja-suave: #FBE3D2;
-  --fondo: #FAF7F2;
-  --tarjeta: #FFFFFF;
+  /* Real Madrid Colors */
+  --rm-blue-900: #00529F; /* Azul clásico RM */
+  --rm-blue-700: #003666; /* Azul más oscuro */
+  --rm-blue-100: #E6F0FA; /* Azul muy claro para fondos */
+  --rm-gold: #FEBE10;     /* Dorado clásico RM */
+  --rm-gold-suave: #FFF5D6; /* Dorado claro */
+  
+  --fondo: #FFFFFF;
+  --tarjeta: #F9F9F9;
   --texto: #1B2321;
   --texto-suave: #5B6764;
-  --borde: #E4DFD4;
+  --borde: #EAEAEE;
 
   --fuente-titulo: "Poppins", sans-serif;
   --fuente-texto: "Inter", sans-serif;
 
   --radio: 14px;
-  --sombra: 0 12px 30px rgba(14, 94, 89, 0.10);
+  --sombra: 0 12px 30px rgba(0, 82, 159, 0.15);
 }
 
 * { box-sizing: border-box; }
@@ -57,22 +59,22 @@ p { color: var(--texto-suave); margin: 0 0 1em; }
 }
 
 .btn--primario {
-  background: var(--teal-900);
+  background: var(--rm-blue-900);
   color: #fff;
 }
 .btn--primario:hover {
-  background: var(--teal-700);
+  background: var(--rm-blue-700);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(14, 94, 89, .25);
+  box-shadow: 0 10px 20px rgba(0, 82, 159, .25);
 }
 
 .btn--outline {
   background: transparent;
-  border-color: var(--teal-900);
-  color: var(--teal-900);
+  border-color: var(--rm-blue-900);
+  color: var(--rm-blue-900);
 }
 .btn--outline:hover {
-  background: var(--teal-900);
+  background: var(--rm-blue-900);
   color: #fff;
 }
 
@@ -81,7 +83,7 @@ p { color: var(--texto-suave); margin: 0 0 1em; }
 .btn-volver {
   background: none;
   border: none;
-  color: var(--teal-900);
+  color: var(--rm-blue-900);
   font-weight: 600;
   cursor: pointer;
   padding: 0;
@@ -95,7 +97,7 @@ p { color: var(--texto-suave); margin: 0 0 1em; }
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(250, 247, 242, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--borde);
 }
@@ -124,7 +126,7 @@ p { color: var(--texto-suave); margin: 0 0 1em; }
   width: 34px;
   height: 34px;
   border-radius: 8px;
-  background: var(--teal-900);
+  background: var(--rm-blue-900);
   color: #fff;
   font-size: .8rem;
   font-weight: 700;
@@ -148,7 +150,7 @@ p { color: var(--texto-suave); margin: 0 0 1em; }
   left: 0; bottom: -4px;
   width: 0%;
   height: 2px;
-  background: var(--naranja);
+  background: var(--rm-gold);
   transition: width .2s ease;
 }
 .nav__link:hover::after { width: 100%; }
@@ -165,90 +167,51 @@ p { color: var(--texto-suave); margin: 0 0 1em; }
 
 .hero__texto h1 {
   font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--rm-blue-900);
 }
 
 .hero__texto p { max-width: 46ch; }
 
-/* --- Ilustración del terminal, dibujada con CSS --- */
+/* --- Espacio para la imagen del club --- */
 .hero__arte {
   position: relative;
-  display: grid;
-  place-items: center;
-  height: 360px;
-  perspective: 800px;
-}
-
-.terminal {
-  width: 260px;
-  transform: rotateY(-8deg) rotateX(4deg);
-  transition: transform .2s ease-out;
-  will-change: transform;
-}
-
-.terminal__pantalla {
-  background: var(--texto);
-  border-radius: 16px;
-  padding: 18px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 360px;
+}
+
+.hero__placeholder {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed var(--rm-blue-100);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tarjeta);
+  color: var(--texto-suave);
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
   box-shadow: var(--sombra);
 }
 
-.terminal__fila { display: flex; gap: 10px; }
-
-.chip {
-  flex: 1;
-  height: 46px;
-  border-radius: 10px;
-}
-.chip--teal { background: var(--teal-700); }
-.chip--naranja { background: var(--naranja); }
-
-.terminal__barra {
-  height: 10px;
-  border-radius: 6px;
-  background: rgba(255,255,255,.18);
-}
-.terminal__barra--corta { width: 60%; }
-
-.terminal__base {
-  width: 70px;
-  height: 34px;
-  margin: 0 auto;
-  background: #D8D2C4;
-  border-radius: 0 0 8px 8px;
-}
-
-.terminal__ticket {
-  position: absolute;
-  width: 60px;
-  height: 90px;
-  background: #fff;
-  border: 1px solid var(--borde);
-  border-radius: 4px;
-  top: 30px;
-  right: 40px;
-  box-shadow: var(--sombra);
-  transform: rotate(8deg);
-}
-
-.terminal__moneda {
-  position: absolute;
-  border-radius: 50%;
-  background: var(--naranja-suave);
-  border: 2px solid var(--naranja);
-}
-.terminal__moneda--1 { width: 26px; height: 26px; bottom: 40px; left: 30px; }
-.terminal__moneda--2 { width: 16px; height: 16px; bottom: 20px; left: 70px; }
-
-/* ===================== SERVICIOS ===================== */
+/* ===================== SERVICIOS / CATEGORÍAS ===================== */
 .servicios { padding-block: 64px; }
 
 .titulo-seccion {
   text-align: center;
   font-size: 1.7rem;
   margin-bottom: 40px;
+  color: var(--rm-blue-900);
 }
 .titulo-seccion--izq { text-align: left; }
 
@@ -267,6 +230,7 @@ p { color: var(--texto-suave); margin: 0 0 1em; }
 }
 .tarjeta:hover {
   box-shadow: var(--sombra);
+  border-color: var(--rm-blue-100);
 }
 
 .tarjeta__icono {
@@ -278,14 +242,14 @@ p { color: var(--texto-suave); margin: 0 0 1em; }
   margin-bottom: 16px;
 }
 .tarjeta__icono svg { width: 26px; height: 26px; }
-.tarjeta__icono--teal { background: var(--teal-100); color: var(--teal-900); }
-.tarjeta__icono--naranja { background: var(--naranja-suave); color: var(--naranja); }
+.tarjeta__icono--primario { background: var(--rm-blue-100); color: var(--rm-blue-900); }
+.tarjeta__icono--secundario { background: var(--rm-gold-suave); color: var(--rm-gold); }
 
 .tarjeta h3 { font-size: 1.05rem; margin-bottom: 6px; }
 .tarjeta p { margin: 0; font-size: .92rem; }
 
 /* ===================== NOSOTROS ===================== */
-.nosotros { padding-block: 64px; background: var(--teal-100); }
+.nosotros { padding-block: 64px; background: var(--rm-blue-100); }
 
 .nosotros__inner {
   display: grid;
@@ -305,14 +269,15 @@ p { color: var(--texto-suave); margin: 0 0 1em; }
   border-radius: var(--radio);
   padding: 18px;
   text-align: center;
+  border: 1px solid var(--borde);
 }
 .stat strong {
   display: block;
   font-family: var(--fuente-titulo);
   font-size: 1.4rem;
-  color: var(--teal-900);
+  color: var(--rm-blue-900);
 }
-.stat span { font-size: .82rem; color: var(--texto-suave); }
+.stat span { font-size: .82rem; color: var(--texto-suave); font-weight: 500; }
 
 /* ===================== CONTACTO ===================== */
 .contacto { padding-block: 64px; }
@@ -352,14 +317,14 @@ p { color: var(--texto-suave); margin: 0 0 1em; }
 .form-contacto input:focus,
 .form-contacto textarea:focus,
 .form-login input:focus {
-  outline: 2px solid var(--teal-700);
+  outline: 2px solid var(--rm-blue-700);
   outline-offset: 1px;
 }
 
 .form-contacto__estado, .form-login__estado {
   font-size: .88rem;
   min-height: 1.2em;
-  color: var(--teal-900);
+  color: var(--rm-blue-900);
   font-weight: 600;
 }
 
@@ -368,7 +333,7 @@ p { color: var(--texto-suave); margin: 0 0 1em; }
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: var(--teal-900);
+  background: var(--rm-blue-900);
   padding: 24px;
 }
 .vista-login.oculto { display: none; }

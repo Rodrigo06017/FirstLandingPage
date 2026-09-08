@@ -1,5 +1,5 @@
 /* ============================================================
-   GrocerQuick POS — script.js
+   Real Madrid Shop — script.js
    JavaScript vanilla: sin librerías, solo DOM + eventos.
    ============================================================ */
 
@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* -----------------------------------------------------------
      1) CAMBIO ENTRE VISTA PRINCIPAL Y VISTA DE LOGIN
-     El botón "Login" oculta el <main> y muestra la sección
-     #vistaLogin. "Volver" hace lo contrario.
   ----------------------------------------------------------- */
   const vistaPrincipal = document.getElementById("vistaPrincipal");
   const vistaLogin = document.getElementById("vistaLogin");
@@ -35,8 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* -----------------------------------------------------------
      2) NAVEGACIÓN INTERNA (scroll suave a secciones)
-     Cualquier elemento con [data-scroll] lleva a la sección
-     indicada en su "href" o en "data-target".
   ----------------------------------------------------------- */
   const enlacesScroll = document.querySelectorAll("[data-scroll]");
 
@@ -59,8 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* -----------------------------------------------------------
      3) EFECTO "TILT" — las tarjetas reaccionan al mouse
-     Al mover el mouse sobre cada tarjeta, la inclinamos
-     ligeramente según la posición del cursor (efecto 3D).
   ----------------------------------------------------------- */
   const tarjetas = document.querySelectorAll("[data-tilt]");
 
@@ -86,30 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* -----------------------------------------------------------
-     4) LA ILUSTRACIÓN DEL HERO TAMBIÉN SIGUE AL MOUSE
-     Se inclina suavemente según la posición del cursor
-     dentro de todo el bloque .hero__arte.
-  ----------------------------------------------------------- */
-  const heroArte = document.getElementById("heroArte");
-  const terminal = heroArte.querySelector(".terminal");
-
-  heroArte.addEventListener("mousemove", (evento) => {
-    const rect = heroArte.getBoundingClientRect();
-    const x = evento.clientX - rect.left;
-    const y = evento.clientY - rect.top;
-
-    const rotarY = ((x - rect.width / 2) / rect.width) * 20;
-    const rotarX = ((rect.height / 2 - y) / rect.height) * 14;
-
-    terminal.style.transform = `rotateY(${rotarY}deg) rotateX(${rotarX}deg)`;
-  });
-
-  heroArte.addEventListener("mouseleave", () => {
-    terminal.style.transform = "rotateY(-8deg) rotateX(4deg)";
-  });
-
-  /* -----------------------------------------------------------
-     5) FORMULARIO DE CONTACTO (validación simple + mensaje)
+     4) FORMULARIO DE CONTACTO (validación simple + mensaje)
   ----------------------------------------------------------- */
   const formContacto = document.getElementById("formContacto");
   const mensajeEstado = document.getElementById("mensajeEstado");
@@ -118,12 +89,12 @@ document.addEventListener("DOMContentLoaded", () => {
     evento.preventDefault();
     const nombre = formContacto.nombre.value.trim();
 
-    mensajeEstado.textContent = `¡Gracias, ${nombre}! Te responderemos pronto.`;
+    mensajeEstado.textContent = `¡Gracias por contactarnos, ${nombre}! Hala Madrid y nada más.`;
     formContacto.reset();
   });
 
   /* -----------------------------------------------------------
-     6) FORMULARIO DE LOGIN (validación simple, sin backend)
+     5) FORMULARIO DE LOGIN (validación simple, sin backend)
   ----------------------------------------------------------- */
   const formLogin = document.getElementById("formLogin");
   const loginEstado = document.getElementById("loginEstado");
@@ -134,13 +105,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const contrasena = document.getElementById("contrasena").value.trim();
 
     if (usuario === "" || contrasena === "") {
-      loginEstado.textContent = "Completa usuario y contraseña.";
+      loginEstado.textContent = "Completa tu correo y contraseña.";
       loginEstado.style.color = "#c0392b";
       return;
     }
 
     loginEstado.style.color = "";
-    loginEstado.textContent = `Bienvenido, ${usuario} (demo, sin backend real).`;
+    loginEstado.textContent = `Bienvenido, madridista ${usuario}. (Demo, sin backend real)`;
   });
 
 });

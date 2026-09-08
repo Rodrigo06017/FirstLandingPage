@@ -3,107 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GrocerQuick POS</title>
+  <title>Tienda Real Madrid</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="style.css" rel="stylesheet">
-  <link rel="stylesheet" href="C:\Users\rodri\OneDrive\Escritorio\Tareas Uni\Tarea Progra1\FirstLandingPage\Backend\style.css">
 </head>
 <body>
 
-  <!-- ============ ENCABEZADO ============ -->
   <header class="header">
     <div class="contenedor header__inner">
       <a href="#inicio" class="logo">
-        <span class="logo__icono">GQ</span>
-        GrocerQuick POS
+        <span class="logo__icono">RM</span>
+        Real Madrid Shop
       </a>
 
       <nav class="nav">
-        <a href="#nosotros" class="nav__link" data-scroll>Conócenos</a>
+        <a href="#nosotros" class="nav__link" data-scroll>El Club</a>
         <a href="#contacto" class="nav__link" data-scroll>Contacto</a>
         <button id="btnLogin" class="btn btn--outline">Login</button>
       </nav>
     </div>
   </header>
 
-  <!-- ============ VISTA PRINCIPAL (landing) ============ -->
   <main id="vistaPrincipal">
 
-    <!-- HERO -->
     <section id="inicio" class="hero">
       <div class="contenedor hero__inner">
         <div class="hero__texto">
-          <h1>Gestión eficiente<br>para tu supermercado</h1>
+          <h1>Viste los colores<br>del Rey de Europa</h1>
           <p>
-            Simplifica tus operaciones diarias con GrocerQuick POS.
-            Un sistema pensado para la velocidad, la claridad y la
-            eficiencia en el punto de venta.
+            Equípate con la indumentaria oficial del Real Madrid.
+            Demuestra tu pasión madridista en cada partido con nuestra
+            colección exclusiva para la mejor afición del mundo.
           </p>
           <button class="btn btn--primario" data-scroll data-target="#servicios">
-            Comenzar ahora
+            Ver colección
           </button>
         </div>
 
         <div class="hero__arte" id="heroArte">
-          <div class="terminal">
-            <div class="terminal__pantalla">
-              <div class="terminal__fila">
-                <span class="chip chip--naranja"></span>
-                <span class="chip chip--teal"></span>
-              </div>
-              <div class="terminal__fila">
-                <span class="chip chip--teal"></span>
-                <span class="chip chip--naranja"></span>
-              </div>
-              <div class="terminal__barra"></div>
-              <div class="terminal__barra terminal__barra--corta"></div>
-            </div>
-            <div class="terminal__base"></div>
+          <!-- TODO: Colocar aquí una imagen de los jugadores, el escudo del Real Madrid o el estadio Santiago Bernabéu -->
+          <!-- Ejemplo: <img src="ruta/a/tu/imagen.jpg" alt="Real Madrid" class="hero__img"> -->
+          <div class="hero__placeholder">
+            <span>[Espacio para Imagen del Club]</span>
           </div>
-          <div class="terminal__ticket"></div>
-          <div class="terminal__moneda terminal__moneda--1"></div>
-          <div class="terminal__moneda terminal__moneda--2"></div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICIOS -->
+    <!-- SERVICIOS / CATEGORÍAS -->
     <section id="servicios" class="servicios">
       <div class="contenedor">
-        <h2 class="titulo-seccion">Nuestros servicios</h2>
+        <h2 class="titulo-seccion">Nuestras Categorías</h2>
 
         <div class="tarjetas">
 
           <article class="tarjeta" data-tilt>
-            <div class="tarjeta__icono tarjeta__icono--teal">
+            <div class="tarjeta__icono tarjeta__icono--primario">
               <svg viewBox="0 0 48 48" fill="none"><path d="M8 14L24 6l16 8v20l-16 8-16-8V14Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 14l16 8 16-8M24 22v20" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
             </div>
-            <h3>Gestión de inventario</h3>
-            <p>Controla existencias en tiempo real y evita quiebres de stock.</p>
+            <h3>Equipaciones</h3>
+            <p>Camisetas oficiales para la temporada, primera, segunda y tercera equipación.</p>
           </article>
 
           <article class="tarjeta" data-tilt>
-            <div class="tarjeta__icono tarjeta__icono--naranja">
+            <div class="tarjeta__icono tarjeta__icono--secundario">
               <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="6" stroke="currentColor" stroke-width="2"/><path d="M10 40c0-8 6-13 14-13s14 5 14 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
-            <h3>Gestión de clientes</h3>
-            <p>Historial de compras y programas de fidelidad en un solo lugar.</p>
+            <h3>Ropa de entrenamiento</h3>
+            <p>Viste igual que los jugadores en Valdebebas con nuestra línea de entrenamiento.</p>
           </article>
 
           <article class="tarjeta" data-tilt>
-            <div class="tarjeta__icono tarjeta__icono--teal">
+            <div class="tarjeta__icono tarjeta__icono--primario">
               <svg viewBox="0 0 48 48" fill="none"><path d="M14 40V22M24 40V10M34 40V28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 40h32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
-            <h3>Gestión de empleados</h3>
-            <p>Turnos, permisos y desempeño de tu equipo bajo control.</p>
+            <h3>Moda y Accesorios</h3>
+            <p>Gorras, bufandas, chaquetas y más para llevar tu madridismo a todas partes.</p>
           </article>
 
           <article class="tarjeta" data-tilt>
-            <div class="tarjeta__icono tarjeta__icono--naranja">
+            <div class="tarjeta__icono tarjeta__icono--secundario">
               <svg viewBox="0 0 48 48" fill="none"><path d="M8 32l10-10 8 6 14-16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 12h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <h3>Gestión de ventas</h3>
-            <p>Reportes claros para tomar mejores decisiones cada día.</p>
+            <h3>Coleccionables</h3>
+            <p>Artículos históricos y ediciones limitadas para verdaderos fanáticos.</p>
           </article>
 
         </div>
@@ -114,27 +97,25 @@
     <section id="nosotros" class="nosotros">
       <div class="contenedor nosotros__inner">
         <div>
-          <h2 class="titulo-seccion titulo-seccion--izq">Conócenos</h2>
+          <h2 class="titulo-seccion titulo-seccion--izq">Historia y Grandeza</h2>
           <p>
-            GrocerQuick POS nace de la necesidad de los supermercados
-            pequeños y medianos de tener un sistema de punto de venta
-            rápido, confiable y fácil de aprender. Diseñamos cada
-            pantalla pensando en el ritmo real de una caja: pocos
-            clics, información clara y cero fricción.
+            El Real Madrid es más que un club, es una leyenda mundial. Conquistando Europa y el mundo 
+            gracias a su ADN ganador. En nuestra tienda oficial te ofrecemos productos con la mayor 
+            calidad para que lleves el escudo con orgullo en cualquier momento y lugar. ¡Hala Madrid!
           </p>
         </div>
         <div class="nosotros__stats">
           <div class="stat">
-            <strong>+120</strong>
-            <span>Tiendas activas</span>
+            <strong>15</strong>
+            <span>Champions League</span>
           </div>
           <div class="stat">
-            <strong>3.2s</strong>
-            <span>Tiempo prom. por venta</span>
+            <strong>36</strong>
+            <span>Ligas Españolas</span>
           </div>
           <div class="stat">
-            <strong>99.8%</strong>
-            <span>Disponibilidad</span>
+            <strong>1902</strong>
+            <span>Año de Fundación</span>
           </div>
         </div>
       </div>
@@ -144,8 +125,8 @@
     <section id="contacto" class="contacto">
       <div class="contenedor contacto__inner">
         <div>
-          <h2 class="titulo-seccion titulo-seccion--izq">Hablemos</h2>
-          <p>¿Tienes dudas sobre GrocerQuick POS? Escríbenos y te respondemos pronto.</p>
+          <h2 class="titulo-seccion titulo-seccion--izq">Soporte al Fan</h2>
+          <p>¿Tienes dudas sobre tallas, envíos o disponibilidad? Escríbenos y te responderemos a la brevedad.</p>
         </div>
 
         <form id="formContacto" class="form-contacto" novalidate>
@@ -172,20 +153,20 @@
   <!-- ============ VISTA DE LOGIN (oculta al inicio) ============ -->
   <section id="vistaLogin" class="vista-login oculto">
     <div class="vista-login__panel">
-      <button id="btnVolver" class="btn-volver" type="button">← Volver al sitio</button>
+      <button id="btnVolver" class="btn-volver" type="button">← Volver a la tienda</button>
 
       <div class="vista-login__marca">
-        <span class="logo__icono">GQ</span>
-        <span>GrocerQuick POS</span>
+        <span class="logo__icono">RM</span>
+        <span>Real Madrid Shop</span>
       </div>
 
-      <h1>Inicia sesión</h1>
-      <p class="vista-login__sub">Accede al panel de tu tienda.</p>
+      <h1>Madridistas</h1>
+      <p class="vista-login__sub">Inicia sesión con tu cuenta de socio o fan.</p>
 
       <form id="formLogin" class="form-login" novalidate>
         <label>
-          Usuario
-          <input type="text" id="usuario" name="usuario" placeholder="usuario@tienda.com" required>
+          Correo electrónico
+          <input type="text" id="usuario" name="usuario" placeholder="correo@madridista.com" required>
         </label>
         <label>
           Contraseña
@@ -200,7 +181,7 @@
   <!-- ============ PIE DE PÁGINA ============ -->
   <footer class="footer">
     <div class="contenedor footer__inner">
-      <span>GrocerQuick POS</span>
+      <span>Real Madrid Shop</span>
       <span class="footer__copy">© 2026 · Proyecto académico</span>
     </div>
   </footer>
